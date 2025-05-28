@@ -1,17 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .calendar {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 1px;
   width: 707px;
-  margin-top: 4px;
   &__day {
     width: 100px;
     height: 100px;
@@ -43,7 +46,7 @@ body {
 
   @each $day, $index in (sun: 0, mon: 1, tue: 2, wed: 3, thu: 4, fri: 5, sat: 6)
   {
-    &--start-#{$day} {
+    &--start-day-#{$day} {
       .calendar__day:nth-child(1) {
         margin-left: 700px * $index;
         grid-column: 7 / 7;
