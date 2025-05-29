@@ -23,8 +23,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: Arial, sans-serif;
-    font-size: 30px;
     transition:
       transform 0.5s,
       background-color 0.5s;
@@ -36,9 +34,10 @@ body {
     }
 
     &::before {
+      font-family: Arial, sans-serif;
+      font-size: 30px;
       counter-increment: day;
       content: counter(day);
-      position: absolute;
     }
   }
 
